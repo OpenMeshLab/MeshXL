@@ -1,6 +1,6 @@
 <div align= "center">
     <img src="./assets/images/meshxl_logo.jpg" width="170px">
-    <h1> Official repo for MeshXL </h1>
+    <h1> Official repo for MeshXL</h1>
 
 </div>
 

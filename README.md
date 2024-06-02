@@ -40,7 +40,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 ## 🚩 News
 
-- [2024/05/31] Upload paper and init project
+- [2024/06/02] Upload paper and init project.
 
 ## ⚡ Quick Start
 
@@ -67,4 +67,4 @@ If you find our code or paper helps, please consider citing:
 
 ## Acknowledgments
 
-Thanks to ShapeNet, 3D-FUTURE, Objaverse, and Objaverse-XL.
+Thanks to these amazing works: ShapeNet, 3D-FUTURE, Objaverse, and Objaverse-XL.

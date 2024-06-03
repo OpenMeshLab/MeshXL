@@ -5,11 +5,11 @@
 </div>
 
 <div align="center">
-    <h2> <a href="https://ch3cook-fdu.github.io/">MeshXL: Neural Coordinate Field for Generative 3D Foundation Models</a></h2>
+    <h2> <a href="https://arxiv.org/abs/2405.20853">MeshXL: Neural Coordinate Field for Generative 3D Foundation Models</a></h2>
 
 <p align="center">
   <a href="https://ch3cook-fdu.github.io/">Project Page</a> •
-  <a href="https://ch3cook-fdu.github.io/">Arxiv Paper</a> •
+  <a href="https://arxiv.org/abs/2405.20853">Arxiv Paper</a> •
   <a href="">HuggingFace Demo</a> •
   <a href="#-citation">Citation
 </p>
@@ -62,7 +62,14 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 If you find our code or paper helps, please consider citing:
 
 ```bibtex
-
+@misc{chen2024meshxl,
+      title={MeshXL: Neural Coordinate Field for Generative 3D Foundation Models}, 
+      author={Sijin Chen and Xin Chen and Anqi Pang and Xianfang Zeng and Wei Cheng and Yijun Fu and Fukun Yin and Yanru Wang and Zhibin Wang and Chi Zhang and Jingyi Yu and Gang Yu and Bin Fu and Tao Chen},
+      year={2024},
+      eprint={2405.20853},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 
 ## Acknowledgments

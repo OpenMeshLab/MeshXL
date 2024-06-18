@@ -8,7 +8,7 @@
     <h2> <a href="https://arxiv.org/abs/2405.20853">MeshXL: Neural Coordinate Field for Generative 3D Foundation Models</a></h2>
 
 <p align="center">
-  <a href="https://ch3cook-fdu.github.io/">Project Page</a> •
+  <a href="https://meshxl.github.io/">Project Page</a> •
   <a href="https://arxiv.org/abs/2405.20853">Arxiv Paper</a> •
   <a href="">HuggingFace Demo</a> •
   <a href="#-citation">Citation
@@ -28,6 +28,9 @@
 
 <!-- ### [MeshXL: Neural Coordinate Field for Generative 3D Foundation Models](https://motion-gpt.github.io/) -->
 <!-- ### [Project Page](https://motion-gpt.github.io/) | [Arxiv Paper](https://arxiv.org/abs/2306.14795) | [HuggingFace Demo](xxx) -->
+
+<video src="https://github.com/OpenMeshLab/MeshXL/assets/videos/mesh_grid" />
+
 
 ## 🏃 Intro MeshXL
 

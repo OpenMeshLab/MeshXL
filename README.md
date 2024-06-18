@@ -29,8 +29,6 @@
 <!-- ### [MeshXL: Neural Coordinate Field for Generative 3D Foundation Models](https://motion-gpt.github.io/) -->
 <!-- ### [Project Page](https://motion-gpt.github.io/) | [Arxiv Paper](https://arxiv.org/abs/2306.14795) | [HuggingFace Demo](xxx) -->
 
-<video src="https://github.com/OpenMeshLab/MeshXL/assets/videos/mesh_grid" />
-
 
 ## 🏃 Intro MeshXL
 

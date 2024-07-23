@@ -47,27 +47,37 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 ## ⚡ Quick Start
 
-<details>
-  <summary><b>Build Environment</b></summary>
+
+### Environment Setting Up
 
   You can build the environment using the provided script:
   ```{bashrc}
   bash set_env.sh
   ```
 
-</details>
+### Data Preparation
+
+  Work in progress...
+
+
 
 ## 💻 Training and Evaluation
 
-<details>
-  <summary><b>Sampling guidance</b></summary>
+### Download Pre-Trained Weights
+
+  Work in progress...
+
+
+### Model Training
+
+  Work in progress...
+
+### Model Inference
 
   To generate 3D meshes with a specified checkpoint:
   ```{bashrc}
   bash scripts/sample-1.3b.sh
   ```
-
-</details>
 
 
 ## 📖 Citation

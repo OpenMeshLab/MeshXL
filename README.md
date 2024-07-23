@@ -41,19 +41,31 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 ## 🚩 News
 
+- [2024/07/23] Upload the inference code.
 - [2024/06/02] Upload paper and init project.
+
 
 ## ⚡ Quick Start
 
 <details>
   <summary><b>Build Environment</b></summary>
 
+  You can build the environment using the provided script:
+  ```{bashrc}
+  bash set_env.sh
+  ```
+
 </details>
 
 ## 💻 Training and Evaluation
 
 <details>
-  <summary><b>Training guidance</b></summary>
+  <summary><b>Sampling guidance</b></summary>
+
+  To generate 3D meshes with a specified checkpoint:
+  ```{bashrc}
+  bash scripts/sample-1.3b.sh
+  ```
 
 </details>
 

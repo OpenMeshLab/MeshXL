@@ -48,36 +48,57 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 ## ⚡ Quick Start
 
 
-### Environment Setting Up
+<details>
+  <summary><b>Environment Setting Up</b></summary>
 
   You can build the environment using the provided script:
   ```{bashrc}
   bash set_env.sh
   ```
 
-### Data Preparation
+</details>
+
+
+<details>
+  <summary><b>Data Preparation</b></summary>
 
   Work in progress...
+
+</details>
+
 
 
 
 ## 💻 Training and Evaluation
 
-### Download Pre-Trained Weights
+<details>
+  <summary><b>Download Pre-Trained Weights</b></summary>
 
   Work in progress...
 
+</details>
 
-### Model Training
+
+<details>
+  <summary><b>MeshXL Generative Pre-Training</b></summary>
 
   Work in progress...
 
-### Model Inference
+</details>
 
-  To generate 3D meshes with a specified checkpoint:
+
+<details>
+  <summary><b>Generating Samples</b></summary>
+
+  To generate 3D meshes with different sizes:
   ```{bashrc}
   bash scripts/sample-1.3b.sh
+  bash scripts/sample-350m.sh   
+  bash scripts/sample-125m.sh
   ```
+
+</details>
+
 
 
 ## 📖 Citation

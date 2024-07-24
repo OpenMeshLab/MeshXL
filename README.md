@@ -76,13 +76,11 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
   We provide pre-trained weights for different sizes of models (i.e. `125m`, `350m`, and `1.3b`) on huggingface. Download the pre-trained weights from the links below to replace the `pytorch_model.bin` files in the corresponding folders under the `./mesh-xl/` folder. The model details are shown below:
 
-  <img width="500" alt="scaling" src="./assets/images/scaling.png">
-
-  | Model Size |                    Download Link                    |
-  |:----------:|:---------------------------------------------------:|
-  |    125M    | [link](https://huggingface.co/CH3COOK/mesh-xl-125m) |
-  |    350M    | [link](https://huggingface.co/CH3COOK/mesh-xl-350m) |
-  |    1.3B    | [link](https://huggingface.co/CH3COOK/mesh-xl-1.3b) |
+  | Model Size | #Layers | #Heads | $d_\text{model}$ | $d_\text{FFN}$ | GPU Hours |                    Download Link                    |
+  |:----------:|:-------:|:------:|:----------------:|:--------------:|:---------:|:---------------------------------------------------:|
+  |    125M    |    12   |   12   |        768       |      3072      |    1944   | [link](https://huggingface.co/CH3COOK/mesh-xl-125m) |
+  |    350M    |    24   |   16   |       1024       |      4096      |    6000   | [link](https://huggingface.co/CH3COOK/mesh-xl-350m) |
+  |    1.3B    |    24   |   32   |       2048       |      8192      |   23232   | [link](https://huggingface.co/CH3COOK/mesh-xl-1.3b) |
 
 
 

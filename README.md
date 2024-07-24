@@ -60,7 +60,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 
 <details>
-  <summary><b>Data Preparation</b></summary>
+  <summary><b>Data</b></summary>
 
   Work in progress...
 
@@ -74,7 +74,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 <details>
   <summary><b>Download Pre-Trained Weights</b></summary>
 
-  We provide pre-trained weights for different sizes of models (i.e. `125m`, `350m`, and `1.3b`) on huggingface. Download the files from the links below:
+  We provide pre-trained weights for different sizes of models (i.e. `125m`, `350m`, and `1.3b`) on huggingface. Download the pre-trained weights from the links below to replace the `pytorch_model.bin` files in the corresponding folders under `./mesh-xl/`.
 
   | Model Size |                    Download Link                    |
   |:----------:|:---------------------------------------------------:|
@@ -96,10 +96,12 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 <details>
   <summary><b>Generating Samples</b></summary>
 
+  <img width="1194" alt="samples" src="./assets/images/objaverse-samples.png">
+
   To generate 3D meshes with different sizes:
   ```{bashrc}
   bash scripts/sample-1.3b.sh
-  bash scripts/sample-350m.sh   
+  bash scripts/sample-350m.sh
   bash scripts/sample-125m.sh
   ```
 

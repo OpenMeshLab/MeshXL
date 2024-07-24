@@ -41,7 +41,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 ## 🚩 News
 
-- [2024/07/23] Upload the inference code.
+- [2024/07/24] Upload the inference code and pre-trained weights.
 - [2024/06/02] Upload paper and init project.
 
 
@@ -107,6 +107,8 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
   bash scripts/sample-350m.sh
   bash scripts/sample-125m.sh
   ```
+
+  Want to see more results? Check our project page out [here](https://meshxl.github.io/)!
 
 </details>
 

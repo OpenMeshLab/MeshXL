@@ -1,5 +1,5 @@
-<div align= "center">
 <!--     <img src="./assets/images/meshxl_logo.jpg" width="170px"> -->
+<div align= "center">
     <h1> Official repo for MeshXL</h1>
 
 </div>
@@ -74,7 +74,13 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 <details>
   <summary><b>Download Pre-Trained Weights</b></summary>
 
-  Work in progress...
+  We provide pre-trained weights for different sizes of models (i.e. `125m`, `350m`, and `1.3b`) on huggingface. Download the files from the links below:
+
+  | Model Size |                    Download Link                    |
+  |:----------:|:---------------------------------------------------:|
+  |    125M    | [link](https://huggingface.co/CH3COOK/mesh-xl-125m) |
+  |    350M    | [link](https://huggingface.co/CH3COOK/mesh-xl-350m) |
+  |    1.3B    | [link](https://huggingface.co/CH3COOK/mesh-xl-1.3b) |
 
 </details>
 

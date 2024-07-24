@@ -100,7 +100,8 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
   <img width="1194" alt="samples" src="./assets/images/objaverse-samples.png">
 
-  To generate 3D meshes with different sizes, feel free to use the following commands. By default, we generate samples with 8 GPUs, and the top-$k$ top-$p$ sampling strategy for diverse samples.
+  To generate 3D meshes with different sizes, feel free to use the following commands. By default, we generate samples with 8 GPUs and the top-$k$ top-$p$ sampling strategy for diverse samples.
+  
   ```{bashrc}
   bash scripts/sample-1.3b.sh
   bash scripts/sample-350m.sh

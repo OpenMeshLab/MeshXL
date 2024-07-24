@@ -84,7 +84,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
   The model details are shown below:
 
-  <img width="1194" alt="scaling" src="./assets/images/scaling.png">
+  <img width="600" alt="scaling" src="./assets/images/scaling.png">
 
 
 </details>

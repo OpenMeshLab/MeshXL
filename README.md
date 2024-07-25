@@ -108,6 +108,39 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
   bash scripts/sample-125m.sh
   ```
 
+  Want to generating shapes for a specified category? We have also uploaded the supervised fine-tuned checkpoints on `chair`, `table`, `bench`, `lamp` to huggingface too! Download the fine-tuned weights from the links below.
+
+  | Model Size |                                              Table                                              |                                              Chair                                              |                                              Lamp                                              |                                              Bench                                              |
+  |:----------:|:-----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|
+  |    125M    | [download link](https://huggingface.co/CH3COOK/MeshXL-125m-sft/blob/main/meshxl-125m-table.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-125m-sft/blob/main/meshxl-125m-chair.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-125m-sft/blob/main/meshxl-125m-lamp.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-125m-sft/blob/main/meshxl-125m-bench.pth) |
+  |    350M    | [download link](https://huggingface.co/CH3COOK/MeshXL-350m-sft/blob/main/meshxl-350m-table.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-350m-sft/blob/main/meshxl-350m-chair.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-350m-sft/blob/main/meshxl-350m-lamp.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-350m-sft/blob/main/meshxl-350m-bench.pth) |
+  |    1.3B    | [download link](https://huggingface.co/CH3COOK/MeshXL-1.3b-sft/blob/main/meshxl-1.3b-table.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-1.3b-sft/blob/main/meshxl-1.3b-chair.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-1.3b-sft/blob/main/meshxl-1.3b-lamp.pth) | [download link](https://huggingface.co/CH3COOK/MeshXL-1.3b-sft/blob/main/meshxl-1.3b-bench.pth) |
+
+
+  After you have downloaded the corresponding checkpoints, please use the following command to generate samples.
+
+  ```{bashrc}
+  export LLM_CONFIG='mesh-xl/mesh-xl-125m'
+  export TEST_CKPT='./ckpts_preprocessed_ckpts/meshxl-125m-sft/meshxl-125m-bench.pth'   # the checkpoint mush align with the $LLM_CONFIG
+
+  accelerate launch \
+      --num_machines 1 \
+      --num_processes 8 \
+      --mixed_precision bf16 \
+      main.py \
+      --dataset dummy_dataset \
+      --n_max_triangles 800 \
+      --n_discrete_size 128 \
+      --llm mesh-xl/mesh-xl-125m \
+      --model mesh_xl \
+      --checkpoint_dir ./outputs \
+      --batchsize_per_gpu 2 \
+      --test_ckpt $TEST_CKPT \
+      --sample_rounds 100 \
+      --dataset_num_workers 0 \
+      --test_only
+  ```
+
   Want to see more results? Check our project page out [here](https://meshxl.github.io/)!
 
 </details>

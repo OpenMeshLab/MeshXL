@@ -121,7 +121,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
   ```{bashrc}
   export LLM_CONFIG='mesh-xl/mesh-xl-125m'
-  export TEST_CKPT='./ckpts_preprocessed_ckpts/meshxl-125m-sft/meshxl-125m-bench.pth'   # the checkpoint mush align with the $LLM_CONFIG
+  export TEST_CKPT='./ckpts-meshxl-125m-sft/meshxl-125m-bench.pth'   # the checkpoint mush align with the $LLM_CONFIG
 
   accelerate launch \
       --num_machines 1 \

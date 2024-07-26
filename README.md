@@ -74,6 +74,8 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 <details>
   <summary><b>Download Pre-Trained Weights</b></summary>
 
+  **\[Special Notes\]**: All the currently released weights are only used for **unconditional** 3D mesh generation.
+
   We provide pre-trained weights for different sizes of models (i.e. `125m`, `350m`, and `1.3b`) on huggingface. Download the pre-trained weights from the links below to replace the `pytorch_model.bin` files in the corresponding folders under the `./mesh-xl/` folder. The model details are shown below:
 
   | Model Size | #Layers | #Heads | $d_\text{model}$ | $d_\text{FFN}$ | GPU Hours |                    Download Link                    |
@@ -100,7 +102,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
   <img width="1194" alt="samples" src="./assets/images/objaverse-samples.png">
 
-  To generate 3D meshes with different sizes, feel free to use the following commands. By default, we generate samples with 8 GPUs and the top-$k$ top-$p$ sampling strategy for diverse samples.
+  To generate 3D meshes with different sizes, feel free to use the following commands. By default, we generate samples with 8 GPUs and the top-k top-p sampling strategy for diverse samples.
   
   ```{bashrc}
   bash scripts/sample-1.3b.sh
@@ -108,6 +110,8 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
   bash scripts/sample-125m.sh
   ```
 
+  **\[Special Notes\]**: All the currently released weights are fine-tuned for **unconditional** 3D mesh generation on a **specified** category.
+  
   Want to generating shapes for a specified category? We have also uploaded the supervised fine-tuned checkpoints on `chair`, `table`, `bench`, `lamp` to huggingface too! Download the fine-tuned weights from the links below.
 
   | Model Size |                                              Table                                              |                                              Chair                                              |                                              Lamp                                              |                                              Bench                                              |
@@ -121,7 +125,8 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
   ```{bashrc}
   export LLM_CONFIG='mesh-xl/mesh-xl-125m'
-  export TEST_CKPT='./ckpts-meshxl-125m-sft/meshxl-125m-bench.pth'   # the checkpoint mush align with the $LLM_CONFIG
+  # the checkpoint mush align with the $LLM_CONFIG
+  export TEST_CKPT='./ckpts-meshxl-125m-sft/meshxl-125m-bench.pth'
 
   accelerate launch \
       --num_machines 1 \

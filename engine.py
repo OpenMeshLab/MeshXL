@@ -130,7 +130,7 @@ def do_train(
             if accelerator.is_main_process and (curr_iter + 1) % args.save_every == 0:
                 save_checkpoint(
                     args.checkpoint_dir,
-                    model.module,
+                    accelerator.unwrap_model(model),
                     optimizer,
                     curr_epoch,
                     args,
@@ -152,7 +152,7 @@ def do_train(
                         task_metrics, eval_loss_dict = test_loader.dataset.eval_func(
                             args,
                             curr_epoch,
-                            model.module,
+                            accelerator.unwrap_model(model),
                             accelerator,
                             test_loader,
                             logger,
@@ -174,7 +174,7 @@ def do_train(
                     filename = "checkpoint_best.pth"
                     save_checkpoint(
                         args.checkpoint_dir,
-                        model.module,
+                        accelerator.unwrap_model(model),
                         optimizer,
                         curr_epoch,
                         args,
@@ -194,7 +194,7 @@ def do_train(
         
         save_checkpoint(
             args.checkpoint_dir,
-            model.module,
+            accelerator.unwrap_model(model),
             optimizer,
             curr_epoch,
             args,

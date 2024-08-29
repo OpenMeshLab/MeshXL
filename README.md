@@ -60,7 +60,7 @@
 <details open>
   <summary><b>Download Pre-Trained Weights</b></summary>
 
-  **\[Special Notes\]**: All the currently released weights are only used for **unconditional** 3D mesh generation.
+  **\[Special Notes\]**: All the following models are generative pre-trained base models. They are capable of **unconditional** 3D mesh generation and **partial mesh completion**.
 
   We provide pre-trained weights for different sizes of models (i.e. `125m`, `350m`, and `1.3b`) on huggingface🤗. Download the pre-trained weights from the links below to replace the `pytorch_model.bin` files in the corresponding folders under the `./mesh-xl/` folder. The model details are shown below:
 

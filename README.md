@@ -47,7 +47,7 @@
 ## ⚡ Quick Start
 
 
-<details>
+<details open>
   <summary><b>Environment Setting Up</b></summary>
 
   You can build the environment using the provided script:
@@ -96,7 +96,7 @@
 </details>
 
 
-<details>
+<details open>
   <summary><b>Generating Samples</b></summary>
 
   <img width="1194" alt="samples" src="./assets/images/objaverse-samples.png">
@@ -150,7 +150,7 @@
 </details>
 
 
-<details>
+<details open>
   <summary><b>Text-to-Mesh Generation</b></summary>
 
   <img width="1194" alt="samples" src="./assets/images/text-to-mesh-samples.png">

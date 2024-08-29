@@ -153,6 +153,8 @@
 <details>
   <summary><b>Text-to-Mesh Generation</b></summary>
 
+  <img width="1194" alt="samples" src="./assets/images/text-to-mesh-samples.png">
+
   We thank the awesome language annotations from [PointLLM](https://github.com/OpenRobotLab/PointLLM) for object captions. We fine-tune a `350m` MeshXL model on Objaverse with 8 RTX-3090 GPUs. 
   
   **Note:** please download the pre-trained checkpoint from [huggingface](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) to replace the `./mesh-xl/x-mesh-xl-350m/pytorch_model.bin` file.

@@ -41,6 +41,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 ## 🚩 News
 
+- [2024/08/29] Upload code and [weights](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) for text-to-mesh generation, welcome to check it out!
 - [2024/07/24] Upload the inference code and pre-trained weights.
 - [2024/06/02] Upload paper and init project.
 
@@ -151,6 +152,32 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 </details>
 
 
+<details>
+  <summary><b>Text-to-Mesh Generation</b></summary>
+    We thank the awesome language annotations from [PointLLM](https://github.com/OpenRobotLab/PointLLM) for object captions. We fine-tune a `350m` MeshXL model on Objaverse with 8 RTX-3090 GPUs. **Please download the pre-trained checkpoint from [huggingface](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) to replace the `./mesh-xl/x-mesh-xl-350m/pytorch_model.bin`** file.
+
+    We are actively working on Gradio demos. Currently, we encourage you to generate samples locally with at least 1 GPU with the following code:
+
+    ```{bashrc}
+    bash scripts/sample-t2mesh.sh
+    ```
+
+    You are also welcome to explore other text conditions and hyper-parameters for better controls:
+
+    ```{bashrc}
+    accelerate launch \
+      --num_machines 1 \
+      --num_processes 1 \
+      --mixed_precision bf16 \
+      sample_t2m.py \
+      --test_ckpt mesh-xl/x-mesh-xl-350m/pytorch_model.bin \
+      --text '3d model of a table' \  # change to the text prompt you need
+      --top_k 50 \                    # larger k -> larger randomness
+      --top_p 0.95 \                  # larger p -> larger randomness
+      --temperature 0.1               # larger temperature -> larger randomness
+    ```
+
+</details>
 
 ## 📖 Citation
 
@@ -169,4 +196,4 @@ If you find our code or paper helps, please consider citing:
 
 ## Acknowledgments
 
-Thanks to these amazing works: ShapeNet, 3D-FUTURE, Objaverse, and Objaverse-XL.
+We express our genuine thanks to the amazing work: [ShapeNet](https://shapenet.org/), [3D-FUTURE](https://tianchi.aliyun.com/specials/promotion/alibaba-3d-future-cn), [Objaverse](https://github.com/allenai/objaverse-xl), [Objaverse-XL](https://github.com/allenai/objaverse-xl), [PolyGen](https://github.com/google-deepmind/deepmind-research/blob/master/polygen/README.md), [Get3D](https://github.com/nv-tlabs/GET3D) and [MeshGPT](https://github.com/nihalsid/mesh-gpt), and the amazing [MeshGPT-pytorch](https://github.com/lucidrains/meshgpt-pytorch) codebase.

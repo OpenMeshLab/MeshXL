@@ -154,7 +154,7 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 <details>
   <summary><b>Text-to-Mesh Generation</b></summary>
-    We thank the awesome language annotations from [PointLLM](https://github.com/OpenRobotLab/PointLLM) for object captions. We fine-tune a `350m` MeshXL model on Objaverse with 8 RTX-3090 GPUs. **Please download the pre-trained checkpoint from [huggingface](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) to replace the `./mesh-xl/x-mesh-xl-350m/pytorch_model.bin`** file.
+    We thank the awesome language annotations from [PointLLM](https://github.com/OpenRobotLab/PointLLM) for object captions. We fine-tune a `350m` MeshXL model on Objaverse with 8 RTX-3090 GPUs. **Note:** please download the pre-trained checkpoint from [huggingface](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) to replace the `./mesh-xl/x-mesh-xl-350m/pytorch_model.bin` file.
 
     We are actively working on Gradio demos. Currently, we encourage you to generate samples locally with at least 1 GPU with the following code:
 

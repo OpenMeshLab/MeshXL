@@ -57,7 +57,7 @@
 
 ## 💻 Training and Evaluation
 
-<details>
+<details open>
   <summary><b>Download Pre-Trained Weights</b></summary>
 
   **\[Special Notes\]**: All the currently released weights are only used for **unconditional** 3D mesh generation.

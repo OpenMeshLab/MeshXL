@@ -8,7 +8,6 @@ from utils.misc import SmoothedValue
 
 
 def compute_learning_rate(args, curr_iter, max_iters):
-    args.warm_lr_iters
     assert curr_iter <= max_iters and curr_iter >= 0
     if (curr_iter <= args.warm_lr_iters) and args.warm_lr_iters > 0:
         # Linear Warmup: warm_lr -> curr_lr -> base_lr

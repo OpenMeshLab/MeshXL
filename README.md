@@ -154,29 +154,29 @@ The polygon mesh representation of 3D data exhibits great flexibility, fast rend
 
 <details>
   <summary><b>Text-to-Mesh Generation</b></summary>
-  
-    We thank the awesome language annotations from [PointLLM](https://github.com/OpenRobotLab/PointLLM) for object captions. We fine-tune a `350m` MeshXL model on Objaverse with 8 RTX-3090 GPUs. **Note:** please download the pre-trained checkpoint from [huggingface](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) to replace the `./mesh-xl/x-mesh-xl-350m/pytorch_model.bin` file.
 
-    We are actively working on Gradio demos. Currently, we encourage you to generate samples locally with at least 1 GPU with the following code:
+  We thank the awesome language annotations from [PointLLM](https://github.com/OpenRobotLab/PointLLM) for object captions. We fine-tune a `350m` MeshXL model on Objaverse with 8 RTX-3090 GPUs. **Note:** please download the pre-trained checkpoint from [huggingface](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) to replace the `./mesh-xl/x-mesh-xl-350m/pytorch_model.bin` file.
 
-    ```{bashrc}
-    bash scripts/sample-t2mesh.sh
-    ```
+  We are actively working on Gradio demos. Currently, we encourage you to generate samples locally with at least 1 GPU with the following code:
 
-    You are also welcome to explore other text conditions and hyper-parameters for better controls:
+  ```{bashrc}
+  bash scripts/sample-t2mesh.sh
+  ```
 
-    ```{bashrc}
-    accelerate launch \
-      --num_machines 1 \
-      --num_processes 1 \
-      --mixed_precision bf16 \
-      sample_t2m.py \
-      --test_ckpt mesh-xl/x-mesh-xl-350m/pytorch_model.bin \
-      --text '3d model of a table' \  # change to the text prompt you need
-      --top_k 50 \                    # larger k -> larger randomness
-      --top_p 0.95 \                  # larger p -> larger randomness
-      --temperature 0.1               # larger temperature -> larger randomness
-    ```
+  You are also welcome to explore other text conditions and hyper-parameters for better controls:
+
+  ```{bashrc}
+  accelerate launch \
+    --num_machines 1 \
+    --num_processes 1 \
+    --mixed_precision bf16 \
+    sample_t2m.py \
+    --test_ckpt mesh-xl/x-mesh-xl-350m/pytorch_model.bin \
+    --text '3d model of a table' \  # change to the text prompt you need
+    --top_k 50 \                    # larger k -> larger randomness
+    --top_p 0.95 \                  # larger p -> larger randomness
+    --temperature 0.1               # larger temperature -> larger randomness
+  ```
 
 </details>
 

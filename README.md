@@ -26,6 +26,7 @@
 
 ## 🚩 News
 
+- [2024/09/26] MeshXL is accepted to NeurIPS 2024! See you in Vancouver!
 - [2024/08/29] Upload code and 🤗[weights](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) for text-to-mesh generation, welcome to check it out!
 - [2024/07/24] Upload the inference code and pre-trained weights.
 - [2024/06/02] Upload paper and init project.

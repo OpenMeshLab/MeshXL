@@ -190,7 +190,7 @@
   git lfs clone https://huggingface.co/datasets/CH3COOK/MeshXL-shapenet-data
   cd ..
   ```
-  Then, use the following command for unique categories:
+  Then, use the following command for specified categories:
   ```
   export BASE_MESHXL=meshxl/mesh-xl-1.3b  # TODO: change the MeshXL config
   export BATCHSIZE_PER_GPU=4              # TODO: change the training batch size

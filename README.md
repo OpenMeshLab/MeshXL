@@ -26,6 +26,7 @@
 
 ## 🚩 News
 
+- [2024/12/12] Upload pre-processed ShapeNet data to [huggingface🤗](https://huggingface.co/datasets/CH3COOK/MeshXL-shapenet-data) and supervised fine-tuning scripts on specified categories.
 - [2024/09/26] MeshXL is accepted to **NeurIPS 2024**🔥! See you in Vancouver!
 - [2024/08/29] Upload code and 🤗[weights](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) for text-to-mesh generation, welcome to check it out!
 - [2024/07/24] Upload the inference code and pre-trained weights.
@@ -48,10 +49,10 @@
 
 <details>
   <summary><b>Data</b></summary>
-
-  Work in progress...
+   Work in Progress...
 
 </details>
+
 
 
 
@@ -71,7 +72,14 @@
   |    350M    |    24   |   16   |       1024       |      4096      |    6000   | [download link](https://huggingface.co/CH3COOK/mesh-xl-350m) |
   |    1.3B    |    24   |   32   |       2048       |      8192      |   23232   | [download link](https://huggingface.co/CH3COOK/mesh-xl-1.3b) |
 
-
+  Use the following command for fast downloading:
+  ```
+  cd ./mesh-xl
+  git lfs clone https://huggingface.co/CH3COOK/mesh-xl-125m
+  git lfs clone https://huggingface.co/CH3COOK/mesh-xl-350m
+  git lfs clone https://huggingface.co/CH3COOK/mesh-xl-1.3b
+  cd ..
+  ```
 
 </details>
 
@@ -82,6 +90,7 @@
   Work in progress...
 
 </details>
+
 
 
 <details open>
@@ -169,6 +178,49 @@
   ```
 
 </details>
+
+
+
+<details open>
+  <summary><b>MeshXL Supervised Fine-Tuning</b></summary>
+
+  Please first download the pre-processed ShapeNet data to the `./data` folder from huggingface:
+  ```
+  cd ./data
+  git lfs clone https://huggingface.co/datasets/CH3COOK/MeshXL-shapenet-data
+  cd ..
+  ```
+  Then, use the following command for unique categories:
+  ```
+  export BASE_MESHXL=meshxl/mesh-xl-1.3b  # TODO: change the MeshXL config
+  export BATCHSIZE_PER_GPU=4              # TODO: change the training batch size
+
+  accelerate launch \
+      --config_file ./config/deepspeed_stage2.yaml \
+      --num_machines 1 \
+      --num_processes 8 \
+      --mixed_precision bf16 \
+      main.py \
+      --dataset sft.shapenet_table \    # TODO: change the dataset filename
+      --n_max_triangles 800 \
+      --n_discrete_size 128 \
+      --warm_lr_iters -1 \
+      --base_lr 1e-6 \
+      --llm $BASE_MESHXL \
+      --model mesh_xl \
+      --checkpoint_dir ./ckpts/meshxl-shapenet-sft-table \
+      --batchsize_per_gpu $BATCHSIZE_PER_GPU \
+      --dataset_num_workers 0 \
+      --augment \
+      --eval_every_iteration 10000 \
+      --save_every 20000 \
+      --max_epoch 1024
+  ```
+
+
+
+</details>
+
 
 ## 📖 Citation
 

@@ -192,7 +192,7 @@
   ```
   Then, use the following command for specified categories:
   ```
-  export BASE_MESHXL=meshxl/mesh-xl-1.3b  # TODO: change the MeshXL config
+  export BASE_MESHXL=mesh-xl/mesh-xl-1.3b # TODO: change the MeshXL config
   export BATCHSIZE_PER_GPU=4              # TODO: change the training batch size
 
   accelerate launch \

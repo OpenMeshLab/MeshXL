@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from tqdm import tqdm
-from eval_utils.evaluate_generation import evaluate
+from eval_utils.perplexity import evaluate
 from datasets.sft.base_dataset import BaseDataset, BASE_DIR
 
 DATASET_DIR = os.path.join(BASE_DIR, 'MeshXL-shapenet-data')

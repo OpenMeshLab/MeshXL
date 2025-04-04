@@ -26,6 +26,7 @@
 
 ## 🚩 News
 
+- [2025/04/04] Upload pre-processed text-to-mesh generation data to [huggingface🤗](https://huggingface.co/datasets/CH3COOK/MeshXL-text-to-mesh-sketchfab).
 - [2024/12/12] Upload pre-processed ShapeNet data to [huggingface🤗](https://huggingface.co/datasets/CH3COOK/MeshXL-shapenet-data) and supervised fine-tuning scripts on specified categories.
 - [2024/09/26] MeshXL is accepted to **NeurIPS 2024**🔥! See you in Vancouver!
 - [2024/08/29] Upload code and 🤗[weights](https://huggingface.co/CH3COOK/x-mesh-xl-350m/blob/main/pytorch_model.bin) for text-to-mesh generation, welcome to check it out!
@@ -177,6 +178,16 @@
     --temperature 0.1               # larger temperature -> larger randomness
   ```
 
+  [Update 2025-04-04] We have uploaded the training and evaluation data used for text-to-mesh generation to [huggingface](https://huggingface.co/datasets/CH3COOK/MeshXL-text-to-mesh-sketchfab). You can load one data chunk through:
+
+  ```{python}
+  import numpy as np
+  data = np.load('ext_text_to_mesh/sketchfab_chunk/sketchfab_pointllm_train_0000.npz', allow_pickle=True)["arr_0"].tolist()
+  # To check the caption for a specified object:
+  data[0]['caption']
+
+  >>> ['3D white arrow on gray background']
+  ```
 </details>
 
 
